@@ -2,4 +2,5 @@
     <string name="app_name">AngelHack</string>
     <string name="logout">Logout</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_display_places">DisplayPlacesActivity</string>
 </resources>

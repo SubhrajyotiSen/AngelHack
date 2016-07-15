@@ -27,6 +27,7 @@ android {
         def STRING = "String"
         buildConfigField STRING, "TWITTER_KEY", "\"ofAiT4yXfrzIlStAY92VzbAmK\""
         buildConfigField STRING, "TWITTER_SECRET", "\"pxqOZs0Rwj6hwR0FDpQZCjyzWYtjQRBx9SjViNhwHMSqJSmgXy\""
+        buildConfigField STRING, "MAPS_API", "\"AIzaSyD14pV7e1OuN6Y9VLZLqRvH3t8bMEiusug\""
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -52,4 +53,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
     compile 'com.android.support:design:24.0.0'
     testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-places:9.2.1'
+
 }
