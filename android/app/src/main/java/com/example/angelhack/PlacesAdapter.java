@@ -11,13 +11,13 @@ import java.util.ArrayList;
 
 class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
 
-    private ArrayList<PlaceModel> mArrayList ;
+    private ArrayList<String> mArrayList ;
     private Context mContext;
     private ViewHolder.ClickListener clickListener;
 
 
 
-    PlacesAdapter (Context context, ArrayList<PlaceModel> arrayList, ViewHolder.ClickListener clickListener) {
+    PlacesAdapter (Context context, ArrayList<String> arrayList, ViewHolder.ClickListener clickListener) {
         this.mArrayList = arrayList;
         this.mContext = context;
         this.clickListener = clickListener;
@@ -35,10 +35,8 @@ class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
-
-        viewHolder.textView.setText(mArrayList.get(position).getPlace());
-        
+    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+        viewHolder.textView.setText(mArrayList.get(position));
 
     }
 
@@ -81,5 +79,10 @@ class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
 
             boolean onItemLongClicked(int position);
         }
+    }
+
+
+    private boolean isLocation(String place){
+        return !(place.equalsIgnoreCase("left") || place.equalsIgnoreCase("right"));
     }
 }

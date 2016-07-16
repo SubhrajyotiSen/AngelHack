@@ -1,18 +1,22 @@
 package com.example.angelhack;
 
 
+import java.util.ArrayList;
+
 public class PlaceModel {
 
-    private String place;
+    private ArrayList<String> places;
     private String lat;
     private String lon;
 
-    public String getPlace() {
-        return place;
+    public ArrayList<String> getPlaces() {
+        return places;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setPlaces(ArrayList<String> places) {
+        this.places = new ArrayList<>();
+        for (String place : places)
+            this.places.add(place);
     }
 
     public String getLat() {
