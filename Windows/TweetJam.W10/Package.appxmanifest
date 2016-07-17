@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:appstudio="http://schemas.microsoft.com/developer/appx/2015/appstudio" 
+  IgnorableNamespaces="uap mp appstudio">
+			<Identity Name="433fc33c-c5cf-441d-8a38-7e65453076b0" Publisher="CN=AppStudio" Version="1.2.0.0" />
+	    <mp:PhoneIdentity PhoneProductId="433fc33c-c5cf-441d-8a38-7e65453076b0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+    <Properties>
+        <DisplayName>AppStudio App</DisplayName>
+        <PublisherDisplayName>AppStudio</PublisherDisplayName>
+        <Logo>Assets\StoreLogo.png</Logo>
+    </Properties>
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    </Dependencies>
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+    <Applications>
+        <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TweetJam.App">
+            <uap:VisualElements 
+			  DisplayName="TweetJam"
+              Square150x150Logo="Assets\Square150x150Logo.png"
+              Square44x44Logo="Assets\Square44x44Logo.png"
+              Description="Use this to create an app from scratch."
+              BackgroundColor="transparent">
+                <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#e6e6e6"/>
+                <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+                    <uap:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile10?config=QgIAAB~LCAAAAAAABACNkctOwzAQRf/F6ywSxENkRVoQQlBaSKsuEELGnSSjOk40mZRGVf6dyaPACpA3nrnX99jjg7qulk0JKgwCT/bTwiWYqvCgIsNYuEFTFWgymfLU8gOZgZ5qoEb6VxNLBrlh0kmCRgzzqObsHkS8uDz3g1aOQF5azdCFLtHCo867yAXAVvwT0m6DTpC~8LESazM6RL2loi4rFb4cVFy//6jWgGnGcmvf7wh7jlmb7THnxkIOjgdrp3ZseRpLU4LfcCPZa9KlChNtK/DUDN0DOpATrrZWar0faxmLoNnClzfmpqtOPRVZTF3eh/ry0rtcpzAktN5fYKb6V~7ZN3ewjtjgf9ghbpRkemSEv6qAFlQk8gu9siIr93mGvNjBTFOK7gibUlH2o5zvgORL~v3CagMD96RtX/vVfgL1DdgAQgIAAA=="/>
+                    <uap:ShowNameOnTiles>
+                        <uap:ShowOn Tile="square150x150Logo"/>
+						<uap:ShowOn Tile="square310x310Logo" />
+                    </uap:ShowNameOnTiles>
+                </uap:DefaultTile>
+            </uap:VisualElements>
+        </Application>
+    </Applications>
+    <Capabilities>
+        <Capability Name="internetClient" />
+    </Capabilities>
+    <appstudio:Metadata>
+        <appstudio:Item Name="appId" Value="433fc33c-c5cf-441d-8a38-7e65453076b0" />
+        <appstudio:Item Name="model" Version="1.15" />
+        <appstudio:Item Name="formula" Value="Win10" Version="1.12.0704.5" />
+        <appstudio:Item DataSource="Twitter" Version="1.4.*"/>
+    </appstudio:Metadata>
+</Package>
